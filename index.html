@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seven Tattoo Studio — Arte en la Piel</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Fuentes Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+</head>
+<body>
+
+  <!-- Capa del efecto linterna -->
+  <div class="spotlight-overlay"></div>
+
+  <!-- FONDO FIJO GLOBAL QUE OCUPA TODA LA PANTALLA -->
+  <div class="global-bg-container">
+    <!-- Capa de fondo oscura/reposo -->
+    <div class="global-bg-base"></div>
+    <!-- Capa HD que se revela con el cursor en toda la pantalla -->
+    <div class="global-reveal-layer" id="global-reveal"></div>
+  </div>
+
+  <!-- NAVBAR STICKY -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <img src="assets/logo.png" alt="Seven Tattoo Logo">
+        <span>SEVEN TATTOO</span>
+      </a>
+      
+      <!-- Menú Desktop -->
+      <ul class="nav-links">
+        <li><a href="#hero">Inicio</a></li>
+        <li><a href="#about">Sobre Mí</a></li>
+        <li><a href="#portfolio">Trabajos</a></li>
+        <!-- <li><a href="#faq">Preguntas</a></li> -->
+        <li><a href="#quote" class="nav-btn-quote">Chat</a></li>
+      </ul>
+
+      <!-- Botón Menú Mobile -->
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir Menú">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+
+    <!-- Menú Desplegable Mobile -->
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#hero" class="mobile-link">Inicio</a>
+      <a href="#about" class="mobile-link">Sobre Mí</a>
+      <a href="#portfolio" class="mobile-link">Trabajos</a>
+      <a href="#faq" class="mobile-link">Preguntas</a>
+      <a href="#quote" class="mobile-link nav-btn-quote">Cotizar Tatuaje</a>
+    </div>
+  </nav>
+
+ <!-- HERO BANNER CON EFECTO REVELADO DE MOUSE -->
+  <header id="hero" class="hero-section">
+    <!-- Fondo base (oscuro / sutil) -->
+    <div class="hero-bg-base"></div>
+
+    <!-- Imagen HD de alguien tatuando que se revela con el mouse -->
+    <div class="hero-reveal-layer" id="hero-reveal"></div>
+
+    <div class="hero-overlay"></div>
+    
+    <div class="hero-content">
+      <p class="hero-subtitle">ESTUDIO DE TATUAJES</p>
+      <h1 class="hero-title">ARTE Y PRECISIÓN EN TU PIEL</h1>
+      <p class="hero-description">Especialistas en Blackwork, Realismo y Tradicional. Creación de piezas únicas con los más altos estándares de higiene y arte.</p>
+      
+      <div class="hero-actions">
+        <a href="#quote" class="btn btn-primary">
+          <i data-lucide="calculator"></i> Cotizar Tatuaje
+        </a>
+        <a href="#portfolio" class="btn btn-secondary">
+          <i data-lucide="eye"></i> Ver Trabajos
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- SECCIÓN: SOBRE MÍ -->
+    <section id="about" class="about-section">
+      <div class="section-container">
+        
+        <div class="about-image-container">
+          <!-- Reemplazá 'tatuador.jpg' por la foto del artista -->
+          <img src="assets/tatuador.webp" alt="Tatuador de Seven Tattoo" class="about-img">
+          <div class="experience-badge">
+            <span class="badge-number">+8</span>
+            <span class="badge-text">Años de experiencia</span>
+          </div>
+        </div>
+
+        <div class="about-text-container">
+          <span class="section-tag">QUIÉN SOY</span>
+          <h2 class="section-title">DETRÁS DE LA MÁQUINA EN SEVEN TATTOO</h2>
+          
+          <p class="about-bio">
+            Mi camino en el mundo del arte comenzó desde muy chico a través de la ilustración y la pintura. Con los años, encontré en el tatuaje la disciplina perfecta para transformar ideas en lienzos vivos y permanentes.
+          </p>
+          <p class="about-bio">
+            En **Seven Tattoo** cada pieza se diseña de forma personalizada, respetando la anatomía del cuerpo y aplicando técnicas precisas para garantizar un tatuaje que envejezca de manera impecable.
+          </p>
+
+          <!-- HIGIENE & PROFESIONALISMO -->
+          <div class="highlights-grid">
+            <div class="highlight-item">
+              <div class="highlight-icon"><i data-lucide="shield-check"></i></div>
+              <div>
+                <h4>Material 100% Descartable</h4>
+                <p>Insumos estériles, agujas selladas y normativas de bioseguridad.</p>
+              </div>
+            </div>
+
+            <div class="highlight-item">
+              <div class="highlight-icon"><i data-lucide="pen-tool"></i></div>
+              <div>
+                <h4>Diseños Exclusivos</h4>
+                <p>Desarrollo de piezas personalizadas según tu idea y zona.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN: GALERÍA / PORFOLIO -->
+    <section id="portfolio" class="portfolio-section">
+      <div class="portfolio-container">
+        
+        <div class="section-header">
+          <span class="section-tag">PORFOLIO</span>
+          <h2 class="section-title">TRABAJOS DESTACADOS</h2>
+          <p class="section-description">Explorá algunos de los tatuajes realizados en el estudio. Filtrá por tu estilo preferido.</p>
+        </div>
+
+        <!-- BOTONES DE FILTRO DE ESTILO -->
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="blackwork">Blackwork & Linework</button>
+          <button class="filter-btn" data-filter="realismo">Realismo</button>
+          <button class="filter-btn" data-filter="tradicional">Tradicional</button>
+        </div>
+
+        <!-- REJILLA DE TRABAJOS -->
+        <div class="gallery-grid" id="gallery-grid">
+          
+          <div class="gallery-card" data-category="blackwork" data-full="https://images.unsplash.com/photo-1562962230-16e4623d36e6?auto=format&fit=crop&q=80&w=1200">
+            <img src="https://images.unsplash.com/photo-1562962230-16e4623d36e6?auto=format&fit=crop&q=80&w=600" alt="Tatuaje Blackwork">
+            <div class="gallery-card-overlay">
+              <span class="card-tag">Blackwork</span>
+              <span class="card-icon"><i data-lucide="maximize-2"></i></span>
+            </div>
+          </div>
+
+          <div class="gallery-card" data-category="realismo" data-full="https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&q=80&w=1200">
+            <img src="https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&q=80&w=600" alt="Tatuaje Realismo">
+            <div class="gallery-card-overlay">
+              <span class="card-tag">Realismo</span>
+              <span class="card-icon"><i data-lucide="maximize-2"></i></span>
+            </div>
+          </div>
+
+          <div class="gallery-card" data-category="tradicional" data-full="assets/tradicional.webp">
+            <img src="assets/tradicional.webp" alt="Tatuaje Tradicional">
+            <div class="gallery-card-overlay">
+              <span class="card-tag">Tradicional</span>
+              <span class="card-icon"><i data-lucide="maximize-2"></i></span>
+            </div>
+          </div>
+
+          <div class="gallery-card" data-category="blackwork" data-full="assets/dark.webp">
+            <img src="assets/dark.webp" alt="Tatuaje Blackwork ">
+            <div class="gallery-card-overlay">
+              <span class="card-tag">Blackwork</span>
+              <span class="card-icon"><i data-lucide="maximize-2"></i></span>
+            </div>
+          </div>
+
+          <div class="gallery-card" data-category="realismo" data-full="assets/realistic 2.webp">
+            <img src="assets/realistic 2.webp" alt="Tatuaje Microrealismo">
+            <div class="gallery-card-overlay">
+              <span class="card-tag">Realismo</span>
+              <span class="card-icon"><i data-lucide="maximize-2"></i></span>
+            </div>
+          </div>
+
+          <div class="gallery-card" data-category="tradicional" data-full="https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&q=80&w=1200">
+            <img src="https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&q=80&w=600" alt="Tatuaje Tradicional Old School">
+            <div class="gallery-card-overlay">
+              <span class="card-tag">Tradicional</span>
+              <span class="card-icon"><i data-lucide="maximize-2"></i></span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+ <!-- SECCIÓN CENTRAL DEL ASISTENTE VIRTUAL (BOT CON INPUT LIBRE) -->
+  <section id="bot-section" class="bot-section-container">
+    <div class="chat-window-centered" id="quote">
+      
+      <div class="chat-header">
+        <div class="chat-avatar-wrapper">
+          <div class="chat-avatar"><span>7</span></div>
+          <span class="online-pulse"></span>
+        </div>
+        <div class="chat-info">
+          <h4>Seven Assistant <span class="bot-badge">IA BOT</span></h4>
+          <p><span class="status-dot"></span> En línea • Escribí tu consulta</p>
+        </div>
+      </div>
+
+      <div id="typing-indicator" class="typing-indicator hidden">
+        <span></span><span></span><span></span>
+      </div>
+
+      <div id="chat-body" class="chat-body"></div>
+
+      <!-- INPUT PARA INTERACCIÓN LIBRE -->
+      <form id="chat-form" class="chat-input-area">
+        <input type="text" id="chat-input" placeholder="Escribí tu mensaje o pregunta..." autocomplete="off">
+        <button type="submit" aria-label="Enviar mensaje"><i data-lucide="send"></i></button>
+      </form>
+
+    </div>
+  </section>
+
+<!-- MODAL COTIZADOR (ACTUALIZADO SIN PRECIO Y PASO 3 ALINEADO) -->
+<div id="quote-modal" class="modal-overlay hidden-section">
+  <div class="modal-content modal-large">
+    <button class="close-modal-btn" onclick="closeModal('quote-modal', event)">&times;</button>
+    
+    <div class="modal-header-custom">
+      <h2>COTIZÁ TU TATUAJE</h2>
+      <p>Configurá las características de tu diseño para enviar la consulta al artista.</p>
+    </div>
+
+    <div class="quote-form-grid">
+      
+      <!-- COLUMNA IZQUIERDA: PASOS -->
+      <div class="quote-steps-container">
+        
+        <!-- PASO 1 -->
+        <div class="quote-card-step">
+          <span class="step-badge">PASO 1</span>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="zone-select">Zona del Cuerpo</label>
+              <select id="zone-select">
+                <option value="Antebrazo / Brazo">Antebrazo / Brazo</option>
+                <option value="Espalda / Pecho">Espalda / Pecho</option>
+                <option value="Pierna / Pantorrilla">Pierna / Pantorrilla</option>
+                <option value="Cuello / Mano / Costillas">Cuello / Mano / Costillas</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="style-select">Estilo de Tatuaje</label>
+              <select id="style-select">
+                <option value="Blackwork / Sombras">Blackwork / Sombras</option>
+                <option value="Línea Fina / Fine Line">Línea Fina / Fine Line</option>
+                <option value="Realismo">Realismo</option>
+                <option value="Color / Tradicional">Color / Tradicional</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- PASO 2 -->
+        <div class="quote-card-step">
+          <span class="step-badge">PASO 2</span>
+          <div class="form-group">
+            <div class="range-header">
+              <label for="size-range">Tamaño aproximado <span id="size-value">10 cm</span></label>
+            </div>
+            <input type="range" id="size-range" min="5" max="30" value="10" step="1">
+            <div class="range-limits">
+              <span>5 cm (Pequeño)</span>
+              <span>30 cm (Grande)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PASO 3 (ALINEADO HORIZONTALMENTE) -->
+        <div class="quote-card-step">
+          <span class="step-badge">PASO 3</span>
+          <div class="form-row align-end">
+            <div class="form-group">
+              <label for="tentative-date">Fecha estimada</label>
+              <input type="date" id="tentative-date" class="step3-input">
+            </div>
+
+            <div class="form-group">
+              <label class="file-label-custom step3-input" for="reference-file">
+                <i data-lucide="upload"></i>
+                <span id="file-name-display">Subir referencia</span>
+              </label>
+              <input type="file" id="reference-file" accept="image/*" style="display: none;">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- COLUMNA DERECHA: RESUMEN SIN PRECIO -->
+      <div class="quote-summary-card">
+        <div class="summary-top">
+          <h3>Resumen de la Consulta</h3>
+          
+          <div class="summary-details">
+  <p class="summary-item">
+    <i data-lucide="map-pin" class="summary-icon"></i>
+    <span><strong>Zona:</strong> <span id="summary-zone">Antebrazo / Brazo</span></span>
+  </p>
+  
+  <p class="summary-item">
+    <i data-lucide="palette" class="summary-icon"></i>
+    <span><strong>Estilo:</strong> <span id="summary-style">Blackwork / Sombras</span></span>
+  </p>
+  
+  <p class="summary-item">
+    <i data-lucide="ruler" class="summary-icon"></i>
+    <span><strong>Tamaño:</strong> <span id="summary-size">10 cm</span></span>
+  </p>
+  
+  <p class="summary-item">
+    <i data-lucide="image" class="summary-icon"></i>
+    <span><strong>Referencia:</strong> <span id="summary-file">Sin adjuntar</span></span>
+  </p>
+</div>
+        </div>
+
+        <div class="summary-bottom">
+          <p class="price-disclaimer">*El valor y la viabilidad del trabajo se confirman por WhatsApp directamente con el artista.</p>
+
+          <button id="btn-whatsapp-quote" class="btn-whatsapp-large">
+            <i data-lucide="message-square"></i> Enviar a WhatsApp
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+  <!-- MODAL 2: VENTANA EMERGENTE DE PREGUNTAS FRECUENTES -->
+  <div id="faq-modal" class="modal-overlay hidden-section">
+    <div class="modal-content">
+      <button class="close-modal-btn" onclick="closeModal('faq-modal')">&times;</button>
+      <h2>PREGUNTAS FRECUENTES</h2>
+      
+      <div class="faq-accordion">
+        <div class="faq-item">
+          <button class="faq-question">¿Aceptan tarjeta de crédito y cuáles son los medios de pago? <i data-lucide="chevron-down"></i></button>
+          <div class="faq-answer">
+            <p>Sí, aceptamos tarjetas de crédito, débito, transferencia bancaria y efectivo en el estudio.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">¿Cómo se realiza la reserva de turno? <i data-lucide="chevron-down"></i></button>
+          <div class="faq-answer">
+            <p>Se coordina abonando una seña previa por transferencia o presencialmente en el estudio.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">¿Cuáles son los cuidados recomendados? <i data-lucide="chevron-down"></i></button>
+          <div class="faq-answer">
+            <p>No ingerir alcohol 24hs antes. Al finalizar te entregamos las instrucciones precisas para la curación.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+
+  <!-- MODAL COTIZADOR MEJORADO Y CORREGIDO -->
+  <div id="quote-modal" class="modal-overlay hidden-section">
+    <div class="modal-content modal-large">
+      <button class="close-modal-btn" onclick="closeModal('quote-modal', event)">&times;</button>
+      
+      <div class="modal-header-custom">
+        <h2>COTIZÁ TU TATUAJE</h2>
+        <p>Configurá las características de tu diseño para enviar la consulta al artista.</p>
+      </div>
+
+      <div class="quote-form-grid">
+        
+        <!-- COLUMNA IZQUIERDA: CONFIGURACIÓN -->
+        <div class="quote-steps-container">
+          
+          <!-- Paso 1 -->
+          <div class="quote-card-step">
+            <span class="step-badge">Paso 1</span>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="zone-select">Zona del Cuerpo</label>
+                <select id="zone-select">
+                  <option value="Antebrazo / Brazo">Antebrazo / Brazo</option>
+                  <option value="Espalda / Pecho">Espalda / Pecho</option>
+                  <option value="Pierna / Pantorrilla">Pierna / Pantorrilla</option>
+                  <option value="Cuello / Mano / Costillas">Cuello / Mano / Costillas</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="style-select">Estilo de Tatuaje</label>
+                <select id="style-select">
+                  <option value="Blackwork / Sombras">Blackwork / Sombras</option>
+                  <option value="Línea Fina / Fine Line">Línea Fina / Fine Line</option>
+                  <option value="Realismo">Realismo</option>
+                  <option value="Color / Tradicional">Color / Tradicional</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Paso 2 -->
+          <div class="quote-card-step">
+            <span class="step-badge">Paso 2</span>
+            <div class="form-group">
+              <div class="range-header">
+                <label for="size-range">Tamaño aproximado</label>
+                <span id="size-value" class="size-pill">10 cm</span>
+              </div>
+              <input type="range" id="size-range" min="5" max="30" value="10" step="1">
+              <div class="range-limits">
+                <span>5 cm (Pequeño)</span>
+                <span>30 cm (Grande)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Paso 3: ALINEACIÓN PERFECTA (FECHA Y BOTÓN DE CARGA) -->
+          <div class="quote-card-step">
+            <span class="step-badge">Paso 3</span>
+            <div class="form-row align-bottom">
+              <div class="form-group">
+                <label for="tentative-date">Fecha estimada</label>
+                <input type="date" id="tentative-date" class="custom-input-field">
+              </div>
+
+              <div class="form-group">
+                <label class="file-label-custom custom-input-field" for="reference-file">
+                  <i data-lucide="upload"></i>
+                  <span id="file-name-display">Subir referencia</span>
+                </label>
+                <input type="file" id="reference-file" accept="image/*" style="display: none;">
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- COLUMNA DERECHA: RESUMEN SIN PRECIO -->
+        <div class="quote-summary-card">
+          <div class="summary-top-content">
+            <h3>Resumen de la Consulta</h3>
+            
+            <div class="summary-details">
+              <p>📍 <strong>Zona:</strong> <span id="summary-zone">Antebrazo / Brazo</span></p>
+              <p>🎨 <strong>Estilo:</strong> <span id="summary-style">Blackwork / Sombras</span></p>
+              <p>📏 <strong>Tamaño:</strong> <span id="summary-size">10 cm</span></p>
+              <p>📷 <strong>Imagen:</strong> <span id="summary-file">No adjuntada</span></p>
+            </div>
+          </div>
+
+          <div class="summary-bottom-content">
+            <p class="price-disclaimer">*El presupuesto final y la factibilidad del diseño se coordinan directamente con el artista por WhatsApp.</p>
+
+            <button id="btn-whatsapp-quote" class="btn-whatsapp-large">
+              <i data-lucide="message-square"></i> Enviar a WhatsApp
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+<!-- BOTÓN FLOTANTE DE WHATSAPP -->
+  <!-- <a href="https://wa.me/5491112345678?text=Hola%20Seven%20Tattoo!%20Quisiera%20hacer%20una%20consulta." 
+     class="whatsapp-float" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="Contactar por WhatsApp">
+    <i data-lucide="message-circle"></i>
+  </a> -->
+
+  <!-- FOOTER PRINCIPAL -->
+  <footer class="footer-section">
+    <div class="footer-container">
+      
+      <!-- Columna 1: Marca & Descripción -->
+      <div class="footer-col">
+        <h3 class="footer-brand">SEVEN TATTOO</h3>
+        <p class="footer-text">
+          Estudio de arte corporal enfocado en piezas únicas, Blackwork, Realismo y piezas personalizadas. Máxima higiene y atención exclusiva.
+        </p>
+       <div class="footer-socials">
+  <!-- Instagram -->
+  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+    </svg>
+  </a>
+
+  <!-- Facebook -->
+  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+    </svg>
+  </a>
+
+  <!-- TikTok (Opcional si querés sumar otra red) -->
+  <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+    </svg>
+  </a>
+</div>
+      </div>
+
+      <!-- Columna 2: Navegación Rápida -->
+      <div class="footer-col">
+        <h4 class="footer-title">Navegación</h4>
+        <ul class="footer-links">
+          <li><a href="#hero">Inicio</a></li>
+          <li><a href="#about">Sobre Mí</a></li>
+          <li><a href="#portfolio">Trabajos</a></li>
+          <!-- <li><a href="#faq">Preguntas Frecuentes</a></li> -->
+          <li><a href="#quote">Pedir Cita</a></li>
+        </ul>
+      </div>
+
+      <!-- Columna 3: Información de Contacto & Ubicación -->
+      <div class="footer-col">
+        <h4 class="footer-title">Contacto & Ubicación</h4>
+        <p class="footer-info"><i data-lucide="map-pin"></i> Buenos Aires, Argentina</p>
+        <p class="footer-info"><i data-lucide="clock"></i> Mar - Sáb: 12:00 a 20:00 hs</p>
+        <p class="footer-info"><i data-lucide="mail"></i> contacto@seventattoo.com</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Seven Tattoo Studio. Todos los derechos reservados.</p>
+      <p class="credits">
+        Diseñado y desarrollado por 
+        <a href="https://visiondesign.com.ar" target="_blank" rel="noopener noreferrer" class="creator-link">
+          VISIONDESIGN
+        </a>
+      </p>
+    </div>
+  </footer>
+
+    <!-- MODAL PARA VER IMAGEN EN PANTALLA COMPLETA -->
+    <div id="image-modal" class="modal">
+      <span class="close-modal"><i data-lucide="x"></i></span>
+      <img id="modal-img" src="" alt="Vista ampliada">
+    </div>
+  </main>
+
+ 
+  <script src="script.js"></script>
+</body>
+</html>
