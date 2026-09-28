@@ -1369,3 +1369,12 @@ header, main, footer, .chatbot-container {
 .summary-item span {
   color: #fff;
 }
+
+/* Desactivar el Spotlight o degradados dinámicos en pantallas táctiles / móviles */
+@media (max-width: 768px) {
+  .spotlight-element, 
+  .card-glow {
+    background: #181818 !important; /* Fondo estático limpio */
+    box-shadow: none !important;
+  }
+}
