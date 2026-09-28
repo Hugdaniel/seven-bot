@@ -1370,11 +1370,12 @@ header, main, footer, .chatbot-container {
   color: #fff;
 }
 
-/* Desactivar el Spotlight o degradados dinámicos en pantallas táctiles / móviles */
+/* Ocultar la capa de linterna completamente en celulares y tablets */
 @media (max-width: 768px) {
-  .spotlight-element, 
-  .card-glow {
-    background: #181818 !important; /* Fondo estático limpio */
-    box-shadow: none !important;
+  .spotlight-overlay {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
   }
 }

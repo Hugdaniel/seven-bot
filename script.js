@@ -66,21 +66,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   updateSpotlight(window.innerWidth / 2, window.innerHeight / 2);
 
-  window.addEventListener('mousemove', (e) => {
-    updateSpotlight(e.clientX, e.clientY);
-  });
+ window.addEventListener('mousemove', (e) => {
+  // 1. Si es un celular o tablet (< 768px), cancela la ejecución
+  if (window.innerWidth <= 768) return;
 
-  window.addEventListener('touchmove', (e) => {
-    if (e.touches && e.touches[0]) {
-      updateSpotlight(e.touches[0].clientX, e.touches[0].clientY);
-    }
-  }, { passive: true });
+  // 2. Solo actualiza el spotlight en computadoras/escritorio
+  updateSpotlight(e.clientX, e.clientY);
+});
 
-  window.addEventListener('touchstart', (e) => {
-    if (e.touches && e.touches[0]) {
-      updateSpotlight(e.touches[0].clientX, e.touches[0].clientY);
-    }
-  }, { passive: true });
+// IMPORTANTE: NO agregues listener para 'touchmove' ni 'touchstart'
+
+ 
 
   // 5. FILTRADO DE LA GALERÍA POR CATEGORÍA
   const filterBtns = document.querySelectorAll('.filter-btn');
